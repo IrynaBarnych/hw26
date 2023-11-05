@@ -1,7 +1,6 @@
 # Завдання 2
 # До вже реалізованого класу «Місто» додайте конструктор та необхідні перевантажені методи.
 
-
 class City:
     def __init__(self, city_name, region, country_name, population, postal_code, city_code, distance):
         self.city_name = city_name
@@ -33,7 +32,6 @@ class City:
         return self.distance
 
     def __eq__(self, other):
-        # Перевизначення оператора ==
         return self.region == other.region
 
     def __sub__(self, other):
@@ -69,8 +67,8 @@ else:
 
 difference = abs(City1 - City2)
 if difference == 0:
-    print("Обидва міста розташовані на однаковій відстані від географічного центру Європи.")
+    print("Обидва міста розташовані на однаковій відстані від географічного центру України.")
 elif difference > 0:
-    print(f"Місто {City2.get_city_name()} ближче до географічного центру Європи на {difference} км.")
+    print(f"Місто {City1.get_city_name()} ближче до географічного центру України на {difference} км.")
 else:
-    print(f"Місто {City1.get_city_name()} ближче до географічного центру Європи на {abs(difference)} км.")
+    print(f"Місто {City2.get_city_name()} ближче до географічного центру України на {abs(difference)} км.")
