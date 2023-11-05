@@ -36,6 +36,7 @@ class People:
     def __lt__(self, other):
         date1 = datetime.strptime(self.date_of_birth, "%Y-%m-%d")
         date2 = datetime.strptime(other.date_of_birth, "%Y-%m-%d")
+        return date1 < date2
 
     def __sub__(self, other):
         date1 = datetime.strptime(self.date_of_birth, "%Y-%m-%d")
