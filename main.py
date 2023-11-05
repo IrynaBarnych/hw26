@@ -22,6 +22,9 @@ class Website:
     def get_watch(self):
         return self.watch
 
+    def __sub__(self, other):
+        return self.watch - other.watch
+
 website1 = Website("Вікіпедія", "https://uk.wikipedia.org", "Вікіпе́дія — загальнодоступна вільна багатомовна онлайн-енциклопедія", 1000000)
 website2 = Website("YouTube", "https://www.youtube.com/", "YouTube — популярний відеохостинг, що надає послуги розміщення відеоматеріалів", 1000000000)
 
@@ -35,5 +38,11 @@ print(f"Адреса вебсайту: {website2.get_adres()}")
 print(f"Опис вебсайту: {website2.get_describe()}")
 print(f"Кількість перегляду за рік: {website2.get_watch()}")
 
+if website1.get_watch() > website2.get_watch():
+    print("Вікіпедія користується більшим попитом.")
+else:
+    print("YouTube користується більшим попитом.")
 
+difference = abs(website1 - website2)
+print(f"Різниця в переглядах: {difference}")
 
