@@ -32,6 +32,10 @@ class City:
     def get_city_code(self):
         return self.distance
 
+    def __eq__(self, other):
+        # Перевизначення оператора ==
+        return self.region == other.region
+
 # Створення екземпляра класу
 City1 = City("Київ", "Київщина", "Україна", "2,8 мільйонів осіб",
                "01000", "044", "260")
@@ -54,3 +58,8 @@ print(f"Назва країни: {City2.get_country_name()}")
 print(f"Кількість жителів у місті: {City2.get_population()}")
 print(f"Поштовий індекс: {City2.get_postal_code()}")
 print(f"Код міста: {City2.get_city_code()}")
+
+if City1 == City2:
+    print("Обидва міста мають однаковий регіон.")
+else:
+    print("Міста мають різні регіони.")
