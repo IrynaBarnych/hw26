@@ -10,7 +10,7 @@ class City:
         self.population = population
         self.postal_code = postal_code
         self.city_code = city_code
-        self.distance = distance
+        self.distance = int(distance)  # Перетворюємо рядок у число
 
     def get_city_name(self):
         return self.city_name
@@ -35,6 +35,9 @@ class City:
     def __eq__(self, other):
         # Перевизначення оператора ==
         return self.region == other.region
+
+    def __sub__(self, other):
+        return self.distance - other.distance
 
 # Створення екземпляра класу
 City1 = City("Київ", "Київщина", "Україна", "2,8 мільйонів осіб",
@@ -63,3 +66,11 @@ if City1 == City2:
     print("Обидва міста мають однаковий регіон.")
 else:
     print("Міста мають різні регіони.")
+
+difference = abs(City1 - City2)
+if difference == 0:
+    print("Обидва міста розташовані на однаковій відстані від географічного центру Європи.")
+elif difference > 0:
+    print(f"Місто {City2.get_city_name()} ближче до географічного центру Європи на {difference} км.")
+else:
+    print(f"Місто {City1.get_city_name()} ближче до географічного центру Європи на {abs(difference)} км.")
