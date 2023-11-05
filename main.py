@@ -32,10 +32,21 @@ class City:
 City1 = City("Київ", "Київщина", "Україна", "2,8 мільйонів осіб",
                "01000", "044")
 
-# Виведення інформації про Місто
+City2 = City("Львів", "Львівщина", "Україна", "723 тис",
+               "79000", "032")
+
+# Виведення інформації про Місто1
 print(f"Назва міста: {City1.get_city_name()}")
 print(f"Назва регіону: {City1.get_region()}")
 print(f"Назва країни: {City1.get_country_name()}")
 print(f"Кількість жителів у місті: {City1.get_population()}")
 print(f"Поштовий індекс: {City1.get_postal_code()}")
 print(f"Код міста: {City1.get_city_code()}")
+
+# Виведення інформації про Місто2
+print(f"Назва міста: {City2.get_city_name()}")
+print(f"Назва регіону: {City2.get_region()}")
+print(f"Назва країни: {City2.get_country_name()}")
+print(f"Кількість жителів у місті: {City2.get_population()}")
+print(f"Поштовий індекс: {City2.get_postal_code()}")
+print(f"Код міста: {City2.get_city_code()}")
