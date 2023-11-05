@@ -28,6 +28,9 @@ class Country:
     def get_cities(self):
         return self.cities
 
+    def compare_continent(self, other_country):
+        return self.continent == other_country.get_continent()
+
 # Створення екземпляра класу
 Country1 = Country("Україна", "Європа", "44 млн.", "+380",
                "Київ", "Харків, Херсон, Миколаїв, Одеса")
@@ -52,4 +55,7 @@ print(f"Телефонний код країни: {Country2.get_country_code()}"
 print(f"Назву столиці: {Country2.get_capital()}")
 print(f"Назву міст країни: {Country2.get_cities()}")
 
-
+if Country1.compare_continent(Country2):
+    print("Ці країни знаходяться на одному континенті.")
+else:
+    print("Ці країни знаходяться на різних континентах.")
