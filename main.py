@@ -32,6 +32,10 @@ class Country:
 Country1 = Country("Україна", "Європа", "44 млн.", "+380",
                "Київ", "Харків, Херсон, Миколаїв, Одеса")
 
+Country2 = Country("Австралія", "Океанія", "25 млн.", "+61",
+                   "Сідней", "Сідней, Мельбурн, Брісбен, Перт")
+
+
 # Виведення інформації про Країну
 print(f"Назва країни: {Country1.get_name()}")
 print(f"Назва континенту: {Country1.get_continent()}")
@@ -39,5 +43,13 @@ print(f"Кількість жителів країни: {Country1.get_population
 print(f"Телефонний код країни: {Country1.get_country_code()}")
 print(f"Назву столиці: {Country1.get_capital()}")
 print(f"Назву міст країни: {Country1.get_cities()}")
+
+# Виведення інформації про Країну
+print(f"Назва країни: {Country2.get_name()}")
+print(f"Назва континенту: {Country2.get_continent()}")
+print(f"Кількість жителів країни: {Country2.get_population()}")
+print(f"Телефонний код країни: {Country2.get_country_code()}")
+print(f"Назву столиці: {Country2.get_capital()}")
+print(f"Назву міст країни: {Country2.get_cities()}")
 
 
