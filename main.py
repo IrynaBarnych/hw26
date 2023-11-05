@@ -36,12 +36,14 @@ class Watch:
 watch1 = Watch("Чип", "Швейцарія", 2020, 200, "Ручний")
 watch2 = Watch("Дейл", "Китай", 2022, 300, "Настінний")
 
+# Годинник 1
 print(f"Модель: {watch1.get_model()}")
 print(f"Виробник: {watch1.get_manufacturer()}")
 print(f"Рік випуску: {watch1.get_year()}")
 print(f"Цена: {watch1.get_price()}")
 print(f"Вид годинника: {watch1.get_watch_type()}")
 
+# Годинник 2
 print(f"Модель: {watch2.get_model()}")
 print(f"Виробник: {watch2.get_manufacturer()}")
 print(f"Рік випуску: {watch2.get_year()}")
