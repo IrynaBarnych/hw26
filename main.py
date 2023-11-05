@@ -3,13 +3,14 @@
 
 
 class City:
-    def __init__(self, city_name, region, country_name, population, postal_code, city_code):
+    def __init__(self, city_name, region, country_name, population, postal_code, city_code, distance):
         self.city_name = city_name
         self.region = region
         self.country_name = country_name
         self.population = population
         self.postal_code = postal_code
         self.city_code = city_code
+        self.distance = distance
 
     def get_city_name(self):
         return self.city_name
@@ -28,12 +29,15 @@ class City:
     def get_city_code(self):
         return self.city_code
 
+    def get_city_code(self):
+        return self.distance
+
 # Створення екземпляра класу
 City1 = City("Київ", "Київщина", "Україна", "2,8 мільйонів осіб",
-               "01000", "044")
+               "01000", "044", "260")
 
 City2 = City("Львів", "Львівщина", "Україна", "723 тис",
-               "79000", "032")
+               "79000", "032", "360")
 
 # Виведення інформації про Місто1
 print(f"Назва міста: {City1.get_city_name()}")
