@@ -78,4 +78,4 @@ else:
     print("Людина 1 старший Людина 2.")
 
 difference = abs(person1 - person2)
-print(f"Різниця в : {difference} роках")
+print(f"Різниця в: {difference} роках")
