@@ -31,11 +31,14 @@ class Country:
     def compare_continent(self, other_country):
         return self.continent == other_country.get_continent()
 
+    def __sub__(self, other):
+        return self.population - other.population
+
 # Створення екземпляра класу
-Country1 = Country("Україна", "Європа", "44 млн.", "+380",
+Country1 = Country("Україна", "Європа", "+38", "44",
                "Київ", "Харків, Херсон, Миколаїв, Одеса")
 
-Country2 = Country("Австралія", "Океанія", "25 млн.", "+61",
+Country2 = Country("Австралія", "Океанія", "+61", "25",
                    "Сідней", "Сідней, Мельбурн, Брісбен, Перт")
 
 
@@ -59,3 +62,6 @@ if Country1.compare_continent(Country2):
     print("Ці країни знаходяться на одному континенті.")
 else:
     print("Ці країни знаходяться на різних континентах.")
+
+difference = abs(Country1 - Country2)
+print(f"Різниця в населені: {difference} млн.")
