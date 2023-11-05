@@ -27,6 +27,12 @@ class Watch:
     def get_watch_type(self):
         return self.watch_type
 
+    def __sub__(self, other):
+        return abs(self.price - other.price)
+
+    def is_same_watch_type(self, other):
+        return self.watch_type == other.watch_type
+
 watch1 = Watch("Чип", "Швейцарія", 2020, 200, "Ручний")
 watch2 = Watch("Дейл", "Китай", 2022, 300, "Настінний")
 
@@ -42,4 +48,10 @@ print(f"Рік випуску: {watch2.get_year()}")
 print(f"Цена: {watch2.get_price()}")
 print(f"Вид годинника: {watch2.get_watch_type()}")
 
+price_difference = watch1 - watch2
+print(f"Різниця в ціні: {price_difference} євро")
 
+if watch1.is_same_watch_type(watch2):
+    print("У годинників однаковий тип.")
+else:
+    print("У годинників різний тип.")
