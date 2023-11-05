@@ -10,7 +10,7 @@ class City:
         self.population = population
         self.postal_code = postal_code
         self.city_code = city_code
-        self.distance = int(distance)  # Перетворюємо рядок у число
+        self.distance = distance
 
     def get_city_name(self):
         return self.city_name
@@ -40,11 +40,11 @@ class City:
         return self.distance - other.distance
 
 # Створення екземпляра класу
-City1 = City("Київ", "Київщина", "Україна", "2,8 мільйонів осіб",
-               "01000", "044", "260")
+City1 = City("Київ", "Київщина", "Україна", 2800000,
+               "01000", "044", 260)
 
-City2 = City("Львів", "Львівщина", "Україна", "723 тис",
-               "79000", "032", "360")
+City2 = City("Львів", "Львівщина", "Україна", 723000,
+               "79000", "032", 360)
 
 # Виведення інформації про Місто1
 print(f"Назва міста: {City1.get_city_name()}")
